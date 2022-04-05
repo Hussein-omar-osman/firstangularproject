@@ -25,11 +25,17 @@
     </div>
     <div class="options">
       <button class="btn btn-success">Show Details</button>
-      <button class="btn btn-warning" *ngIf="p.available === 'Available'">
+      <button
+        class="btn btn-warning"
+        *ngIf="p.available === 'Available'; else noAvailable"
+      >
         Buy Now
       </button>
+      <ng-template #noAvailable>
+        <button class="btn btn-danger">Notify Me</button>
+      </ng-template>
     </div>
   </div>
 </div>
 
-[disabled]="p.available === 'Not Available'"
+<!-- [disabled]="p.available === 'Not Available'" -->
