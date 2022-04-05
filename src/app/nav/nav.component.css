@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  background-color: #f5b041;
+}
+.site-name {
+  padding: 5px 30px;
+  color: #e74c3c;
+  margin: 19px 0 10px 10px;
+}
+.site-menu {
+  padding: 10px 30px;
+  margin-left: 150px;
+  margin-top: 19px;
+}
+a {
+  text-decoration: none;
+  color: #212f3d;
+  margin: 0 10px;
+}
