@@ -60,4 +60,12 @@ export class ProductsComponent implements OnInit {
       image: '/assets/products/product-image-6.jpeg',
     },
   ];
+
+  theColor(avai: any) {
+    if (avai === 'Available') {
+      return 'green';
+    } else {
+      return 'red';
+    }
+  }
 }

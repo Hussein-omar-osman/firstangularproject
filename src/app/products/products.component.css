@@ -1,6 +1,6 @@
 .product-container {
   display: flex;
-  margin: 15px Opx;
+  margin: 15px 0px;
   padding: 5px 5px;
   border-radius: 5px;
 }
@@ -18,6 +18,8 @@
   margin: 0px 20px;
 }
 .name-container {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
   margin: 0px 20px;
 }
 .details {

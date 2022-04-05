@@ -2,5 +2,7 @@
   <span><b>Search:</b></span>
   <!-- <input type="text" (input)="onSearchValue($event)" /> -->
   <input type="text" [(ngModel)]="searchTerm" />
-  <p>{{ searchTerm }}</p>
+  <span *ngIf="searchTerm.length > 0">
+    You have searched '{{ searchTerm }}'
+  </span>
 </div>

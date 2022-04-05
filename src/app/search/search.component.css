@@ -8,3 +8,7 @@ input[type="text"] {
   margin-left: 20px;
   border: none;
 }
+
+span {
+  margin: 0 20px;
+}
