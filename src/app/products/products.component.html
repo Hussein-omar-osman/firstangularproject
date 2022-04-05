@@ -1,6 +1,14 @@
 <!-- <div *ngFor="let p of products">
   <p>here is: {{ p.name }}</p>
 </div> -->
+<div class="filter">
+  <app-filter
+    [all]="AllProducts"
+    [availa]="Available"
+    [notAvaila]="NotAvailable"
+  ></app-filter>
+</div>
+
 <div *ngFor="let p of products; let i = index">
   <div
     class="product-container"

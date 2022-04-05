@@ -68,4 +68,13 @@ export class ProductsComponent implements OnInit {
       return 'red';
     }
   }
+  AllProducts = this.products.length;
+
+  Available = this.products.filter((p) => {
+    return p.available === 'Available';
+  }).length;
+
+  NotAvailable = this.products.filter((p) => {
+    return p.available === 'Not Available';
+  }).length;
 }

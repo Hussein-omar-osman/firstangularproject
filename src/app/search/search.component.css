@@ -7,8 +7,14 @@ input[type="text"] {
   height: 30px;
   margin-left: 20px;
   border: none;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 span {
   margin: 0 20px;
+}
+
+.changBG {
+  background-color: #f5dfbe;
 }

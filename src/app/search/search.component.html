@@ -1,4 +1,4 @@
-<div class="search-div">
+<div class="search-div" [ngClass]="{ changBG: searchTerm != '' }">
   <span><b>Search:</b></span>
   <!-- <input type="text" (input)="onSearchValue($event)" /> -->
   <input type="text" [(ngModel)]="searchTerm" />

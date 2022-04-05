@@ -1,4 +1,4 @@
-<div class="alert alert-success" [hidden]="alertHidden">
+<div class="alert alert-success" [ngClass]="{ fadeOut: alertHidden }">
   <p>This website uses cookies to provide better user experience</p>
   <div class="close">
     <button class="btn" (click)="onXClick()">x</button>
