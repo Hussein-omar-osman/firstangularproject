@@ -1,8 +1,5 @@
-<!-- <div *ngFor="let p of products">
-  <p>here is: {{ p.name }}</p>
-</div> -->
 <div>
-  <app-search></app-search>
+  <app-search (searchGo)="receivedSearch($event)"></app-search>
 </div>
 <div class="filter">
   <app-filter
@@ -13,10 +10,15 @@
   ></app-filter>
 </div>
 
-<p>{{ radioBtnValue }}</p>
-
+<!-- <p>{{ radioBtnValue }}</p> -->
+<!-- *ngIf="radioBtnValue === 'All' || radioBtnValue === p.available" -->
 <ng-container *ngFor="let p of products; let i = index">
-  <div *ngIf="radioBtnValue === 'All' || radioBtnValue === p.available">
+  <div
+    *ngIf="
+      searchedTermReceived === '' ||
+      p.name.toLocaleLowerCase().includes(searchedTermReceived)
+    "
+  >
     <div
       class="product-container"
       [ngStyle]="{

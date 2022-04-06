@@ -95,9 +95,15 @@ export class ProductsComponent implements OnInit {
   }).length;
 
   radioBtnValue: string = 'All';
+  searchedTermReceived: string = '';
 
   receviedRadioValue(event: string) {
     this.radioBtnValue = event;
-    console.log(this.radioBtnValue);
+    // console.log(this.radioBtnValue);
+  }
+
+  receivedSearch(data: string) {
+    this.searchedTermReceived = data;
+    // console.log(this.searchedTermReceived);
   }
 }
