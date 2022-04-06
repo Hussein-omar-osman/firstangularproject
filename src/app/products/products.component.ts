@@ -59,6 +59,22 @@ export class ProductsComponent implements OnInit {
       available: 'Available',
       image: '/assets/products/product-image-6.jpeg',
     },
+    {
+      id: 7,
+      name: 'Sumsang Galaxy S20+',
+      price: '1100',
+      color: 'black',
+      available: 'Not Available',
+      image: '/assets/products/product-image-7.jpeg',
+    },
+    {
+      id: 8,
+      name: 'PlayStation 5',
+      price: '500',
+      color: 'white',
+      available: 'Available',
+      image: '/assets/products/product-image-8.jpeg',
+    },
   ];
 
   theColor(avai: any) {
@@ -77,4 +93,11 @@ export class ProductsComponent implements OnInit {
   NotAvailable = this.products.filter((p) => {
     return p.available === 'Not Available';
   }).length;
+
+  radioBtnValue: string = 'All';
+
+  receviedRadioValue(event: string) {
+    this.radioBtnValue = event;
+    console.log(this.radioBtnValue);
+  }
 }

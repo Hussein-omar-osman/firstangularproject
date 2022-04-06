@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -13,4 +13,13 @@ export class FilterComponent implements OnInit {
   @Input() all = 0;
   @Input() availa = 0;
   @Input() notAvaila = 0;
+
+  selectedRadioBtn = 'All';
+
+  @Output() filteredRadioBtn: EventEmitter<string> = new EventEmitter<string>();
+
+  changeRadioBtn() {
+    this.filteredRadioBtn.emit(this.selectedRadioBtn);
+    console.log(this.selectedRadioBtn);
+  }
 }
