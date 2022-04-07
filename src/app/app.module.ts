@@ -11,6 +11,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
 import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './filter/filter.component';
+import { PercePipe } from './perce.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FilterComponent } from './filter/filter.component';
     SearchComponent,
     ProductsComponent,
     FilterComponent,
+    PercePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

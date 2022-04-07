@@ -12,13 +12,12 @@
 
 <!-- <p>{{ radioBtnValue }}</p> -->
 <!-- *ngIf="radioBtnValue === 'All' || radioBtnValue === p.available" -->
-<ng-container *ngFor="let p of products; let i = index">
-  <div
-    *ngIf="
+<!-- *ngIf="
       searchedTermReceived === '' ||
       p.name.toLocaleLowerCase().includes(searchedTermReceived)
-    "
-  >
+    " -->
+<ng-container *ngFor="let p of products; let i = index">
+  <div *ngIf="radioBtnValue === 'All' || radioBtnValue === p.available">
     <div
       class="product-container"
       [ngStyle]="{
@@ -36,8 +35,11 @@
           <div class="details" [ngStyle]="{ color: theColor(p.available) }">
             {{ p.available }}
           </div>
-          <div class="details"><b>Price: </b>${{ p.price }}</div>
+          <div class="details"><b>Price: </b>{{ p.price | currency }}</div>
           <div class="details"><b>Color: </b>{{ p.color }}</div>
+          <div class="details">
+            <b>Percentage: </b>{{ p.bought | perce: p.inStock:0 }}%
+          </div>
         </div>
       </div>
       <div class="options">

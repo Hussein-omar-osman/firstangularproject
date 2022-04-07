@@ -2,5 +2,11 @@
   <app-nav></app-nav>
   <app-header></app-header>
   <app-notification></app-notification>
+  <div>
+    <input type="text" #inputText (keyup)="(0)" />
+    <br />
+    <button class="btn btn-primary" (click)="onClick(inputText)">Greet</button>
+    <p>{{ inputText.value }}</p>
+  </div>
   <app-products></app-products>
 </div>
